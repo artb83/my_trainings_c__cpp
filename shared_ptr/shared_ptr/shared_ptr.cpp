@@ -60,7 +60,7 @@ public:
         return this->m_ptr;
     }
 
-    ~Sptr() {
+    virtual ~Sptr() {
         --(*m_count);
         std::cout << "Removed 1 ref, count=" << *m_count << "\n";
         if (*m_count <= 0) {
