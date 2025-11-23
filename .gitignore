@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.exe
+*.obj
+*.log
+*.vsidx
+*.tlog
+*.ilk
+*.pdb
+*.idb
+*.ipch
+*.VC.db
+semaphores/semaphores/vcpkg/
