@@ -80,7 +80,7 @@ public:
                 if (bDigit) this->charsToInts.push_back(curChar);
                 if (!this->bFoundSign && bSign) {
                     this->bFoundSign = true;
-                    bNegative = (curChar.getChar() == '-' ? true : false);
+                    this->bNegative = (curChar.getChar() == '-' ? true : false);
                 }
                 if (bDigit && !this->bFoundDigits) this->bFoundDigits = true;
             }
