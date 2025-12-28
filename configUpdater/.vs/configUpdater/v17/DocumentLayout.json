@@ -18,11 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "configUpdater.h",
               "ToolTip": "C:\\Users\\artur\\git\\my_trainings_c__cpp\\configUpdater\\configUpdater.h",
               "RelativeToolTip": "configUpdater.h",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAD4AAAAOAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-23T09:06:06.555Z",
               "EditorCaption": ""
@@ -45,7 +49,7 @@
               "RelativeDocumentMoniker": "configUpdater.cpp",
               "ToolTip": "C:\\Users\\artur\\git\\my_trainings_c__cpp\\configUpdater\\configUpdater.cpp",
               "RelativeToolTip": "configUpdater.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-23T09:05:41.546Z",
               "EditorCaption": ""

@@ -96,7 +96,7 @@ public:
     }
 
     virtual void talk() const {}
-    void walk() const {
+    virtual void walk() const {
         std::cout << "Animal " << m_name << " is walking\n";
     }
     std::string getName() const {
@@ -111,7 +111,7 @@ protected:
     std::string m_name;
 };
 
-class Dog final : public Animal{
+class Dog : public Animal{
 public:
     Dog(std::string name) : Animal(name) {
         std::cout << "Dog " << m_name << " created\n";
@@ -119,7 +119,7 @@ public:
     void talk() const override{
         std::cout << m_name << " wooof\n";
     }
-    void walk() const{
+    void walk() const override{
         std::cout << "Dog " << m_name << " is walking\n";
     }
 
@@ -127,8 +127,22 @@ public:
         Animal::walk();
     }
 
+    std::string getName() {
+        return m_name;
+    }
+
     ~Dog() {
         std::cout <<"Dog " << m_name << " removed\n";
+    }
+};
+
+class Puppy final : public Dog {
+public:
+    Puppy(std::string name) : Dog(name) {
+        std::cout << "Puppy " << m_name << " created\n";
+    }
+    ~Puppy() {
+        std::cout << "Puppy " << m_name << " removed\n";
     }
 };
 
@@ -160,11 +174,18 @@ public:
 
 int main()
 {
+    /*Animal&& mouse=Mouse("Fifi");
+    mouse.talk();
+    mouse.walk();*/
     try{
         Animal* dptr = new Dog("Fido");
         dptr->talk();
-        dptr->walk();
-        delete dptr;
+        std::cout<<"name "<<dptr->getName()<<std::endl;
+        delete dptr; 
+        Dog* ppup = new Puppy("Pipi");
+        ppup->talk();
+        ppup->walk();
+        delete ppup;
     }
     catch (const int& e) {
         std::cout << "Exception " << e << std::endl;
