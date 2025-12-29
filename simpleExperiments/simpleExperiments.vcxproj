@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="factoryPattern.cpp" />
     <ClCompile Include="simpleExperiments.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="factoryPattern.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

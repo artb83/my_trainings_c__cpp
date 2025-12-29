@@ -1,7 +1,8 @@
 #include<limits.h>
-#include<iostream>
+//#include<iostream>
 #include<vector>
 #include<string>
+#include "factoryPattern.h"
 
 class Char {
 protected:
@@ -161,17 +162,28 @@ public:
     }
 };
 
+std::mutex mtx1;
+std::mutex mtx2;
+
+
 int main() {
 
     // Error in the below line : Cannot create 
     // object of abstract class
     // Shape s;      
-
-    Shape* pshape = new Circle();
-    pshape->draw();
-    Shape* prect = new Rectangle();
-    prect->draw();
-
-    delete pshape;
-    delete prect;
+    sensorFacotry* sf = new ccdFacotry();
+    auto ccd = sf->createSensor();
+    ccd->build();
+    struct threadArgs tArgs;
+    tArgs.factPtr = sf;
+    tArgs.mutex1 = &mtx1;
+    tArgs.mutex2 = &mtx2;
+    std::thread t1(buildSensors, &tArgs);
+    std::thread t2(buildSensors, &tArgs);
+    std::thread t3(showSensors, &tArgs);
+    std::thread t4(showSensors, &tArgs);
+    t1.join();
+    t2.join();
+    t3.join();
+    t4.join();
 }
